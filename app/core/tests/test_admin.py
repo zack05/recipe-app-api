@@ -1,4 +1,3 @@
-from django.conf.urls import url
 from django.test import TestCase, Client
 from django.contrib.auth import get_user_model
 from django.urls import reverse
@@ -26,7 +25,6 @@ class AdminSiteTest(TestCase):
 
         self.assertContains(res, self.user.name)
         self.assertContains(res, self.user.email)
-
 
     def test_user_change_page(self):
         """Test that the user edit page works"""
